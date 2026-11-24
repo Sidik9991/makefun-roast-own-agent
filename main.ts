@@ -55,6 +55,22 @@ const CANDIDATES: Candidate[] = [
     line: "My agent calls it 'reasoning' when it guesses slowly.",
     scores: [2, 1, 2, 2, 2],
   },
+  // --- Pass 2 challengers ---
+  {
+    // "Done!" announced with total confidence, no tool call behind it.
+    line: "My agent said 'Done!' with the confidence of a tool call it never actually made.",
+    scores: [2, 1, 2, 2, 2],
+  },
+  {
+    // Instant certainty as a speed record for hallucination.
+    line: "Asked my agent if it was sure. It said 'Absolutely' — the fastest hallucination on record.",
+    scores: [2, 2, 2, 1, 1],
+  },
+  {
+    // Mistakes, industrialised.
+    line: "My agent doesn't make mistakes. It generates them, confidently, at scale, with citations.",
+    scores: [2, 1, 2, 1, 1],
+  },
 ];
 
 function total(c: Candidate): number {
